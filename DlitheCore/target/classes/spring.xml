@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="fur1" class="core.spring.DlitheCore.Furniture">
+<property name="name" value="Dinning table"/>
+<property name="type" value="Ply Wood"/>
+<property name="usage" value="Office"/>
+<property name="price" value="1700"/>
+</bean>
+
+<bean id="fur2" class="core.spring.DlitheCore.Furniture">
+<constructor-arg type="java.lang.String" value="Chair"/>
+<constructor-arg type="java.lang.String" value="Bamboo"/>
+<constructor-arg type="java.lang.String" value="Commercial"/>
+<constructor-arg type="int" value="650"/>
+</bean>
+
+<bean id="fur3" class="core.spring.DlitheCore.Furniture">
+<constructor-arg index="0" value="Desk"/>
+<constructor-arg index="1" value="Steel"/>
+<constructor-arg index="3" value="800"/>
+<constructor-arg index="2" value="Home"/>
+</bean>
+
+<bean id="show" class="core.spring.DlitheCore.Showroom">
+<property name="furniture1" ref="fur1"/>
+<property name="furniture2" ref="fur2"/>
+<property name="furniture3" ref="fur3"/>
+</bean>
+
+</beans>
