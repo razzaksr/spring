@@ -4,7 +4,31 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="fur1" class="core.spring.DlitheCore.Furniture">
+<bean id="dlithe" class="core.spring.DlitheCore.Dlithe">
+<property name="person" value="Vijay"/>
+<property name="place" value="Bangalore"/>
+<property name="email" value="vijay@gamil.com"/>
+</bean>
+
+<bean id="cognizant" class="core.spring.DlitheCore.Dlithe">
+<property name="person" value="Mohamed"/>
+<property name="place" value="Salem"/>
+<property name="email" value="razzaksr@gamil.com"/>
+</bean>
+
+<bean id="trainee" class="core.spring.DlitheCore.Trainee" autowire="byName">
+<property name="skills">
+<list><value>Junit</value><value>Maven</value><value>Mockito</value></list>
+</property>
+<property name="career" value="Web developer"/>
+</bean>
+
+<bean id="trainer" class="core.spring.DlitheCore.Trainer" autowire="byName">
+<property name="clients" value="30"/>
+<property name="role" value="architect"/>
+</bean>
+
+<!-- <bean id="fur1" class="core.spring.DlitheCore.Furniture">
 <property name="name" value="Dinning table"/>
 <property name="type" value="Ply Wood"/>
 <property name="usage" value="Office"/>
@@ -29,6 +53,6 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 <property name="furniture1" ref="fur1"/>
 <property name="furniture2" ref="fur2"/>
 <property name="furniture3" ref="fur3"/>
-</bean>
+</bean> -->
 
 </beans>
