@@ -8,5 +8,6 @@
 </head>
 <body>
 <h2>Internship on ${data }</h2>
+<h3>${res }</h3>
 </body>
 </html>
